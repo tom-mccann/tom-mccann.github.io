@@ -184,7 +184,7 @@ window.addEventListener('load', function() {
 	========================================================== */
 
 	activeNav();
-	cookieNotice();
+	// cookieNotice();
 	//loadImages();
 
 });
