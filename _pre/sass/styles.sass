@@ -1,0 +1,359 @@
+@import core
+
+$bitter: 'Bitter', $arial
+
+$black: #111111
+$whiteHEX: #FFFFFF
+$whiteRGB: "255, 255, 255"
+
+$redHEX: #ED1C24
+$redRGB: "237, 28, 36"
+$darkRedHEX: #A0090F
+$darkRedRGB: "160, 9, 15"
+$blueHEX: #0071BC
+$blueRGB: "0, 113, 166"
+
+$headerHeight: 70px
+html
+	font-family: $arial
+
+.contain
+	padding: 1rem
+
+.column
+	margin: 1rem 0
+
+.content 
+	margin: 0 1rem
+
+.margin-bottom
+	margin-bottom: 1rem
+
+.margin-top
+	margin-top: 1rem
+
+a
+	color: $redHEX
+
+button, .button
+	background-color: $redHEX
+	border: 0
+	+border-radius(1em)
+	+box-sizing(border-box)
+	color: $whiteHEX
+	cursor: pointer
+	display: inline-block
+	font-size: rem(20)
+	font-weight: 600
+	padding: .6em .8em
+	text-align: center
+	text-decoration: none
+	text-transform: uppercase
+
+button:hover, .button:hover
+	background-color: $darkRedHEX
+	color: $whiteHEX
+
+figcaption
+	background-color: $redHEX
+	color: $whiteHEX
+	padding: 0.5rem
+	text-align: center
+
+h1, .h1
+	border-bottom: solid 2px $redHEX
+	color: $redHEX
+	font-size: rem(20)
+	font-weight: bold
+	line-height: 1.2em
+	margin: 0 0 1rem
+	padding: 0 0 1rem
+
+h2, .h2
+	color: #444444
+	font-size: rem(20)
+	line-height: 1.2em
+	margin: 0 0 1rem
+	padding: 0
+
+h3
+	color: #444444
+	font-size: rem(16)
+	line-height: 1.2em
+	margin: 0 0 1rem
+	padding: 0
+
+hr
+	border: solid 1px $redHEX
+	height: 0
+
+input, textarea
+	background-color: $whiteHEX
+	border: 0
+	+box-sizing(border-box)
+	color: $black
+	display: block
+	font-size: 16px
+	margin: 0 0 1rem
+	padding: .6rem
+	width: 100%
+
+li
+	line-height: 1.4em
+
+	img
+		display: inline-block
+		margin-right: rem(8)
+
+nav, .nav
+	
+	a
+		background-color: $redHEX
+		+border-radius(1em)
+		color: $whiteHEX
+		font-family: $arial
+		font-size: 14px
+		font-weight: bold
+		line-height: 1.2em
+		padding: 1em
+		text-transform: uppercase
+
+	a:hover
+		background-color: $darkRedHEX
+
+	a.active
+		background-color: $black
+
+p, .p
+	color: $black
+	font-size: rem(16)
+	line-height: 1.2em
+	margin: 0 0 1rem
+	padding: 0
+
+.p
+	display: inline-block
+
+strong
+	color: #444444
+
+.box
+	background-color: $redHEX
+	padding: 1rem
+
+	h1, a
+		color: $whiteHEX
+
+	h1
+		border: 0
+		padding: 0
+
+.map
+	background-color: #4D6A79
+
+.uk
+	font-size: 0.7em
+
+#hamburgerNav
+
+	nav
+		background-color: $whiteHEX
+		+border-radius(24px)
+		padding: 1em
+
+		li
+			margin-bottom: 0.2em
+
+		a 
+			font-size: 16px
+
+#pageHeader
+	background-color: $whiteHEX
+
+	.contain
+		padding-bottom: 1rem
+		padding-top: 1rem
+
+		.content
+			margin-bottom: 0
+			margin-top: 0
+
+	#logo
+
+		a
+			display: block
+
+		.content
+			margin-right: 0
+
+	#contact
+		display: block
+		float: right
+		width: 100%
+
+		span
+			float: right
+			font-size: rem(18)
+			font-weight: bold
+			line-height: 32px
+			margin-right: 10px
+
+			a
+				font-size: rem(24)
+				font-weight: bold
+				text-decoration: none
+
+		.icon
+			background-color: $redHEX
+			+border-radius(4px)
+			float: right
+			height: 32px
+			margin-left: 5px
+			width: 32px
+
+	#mainNav
+
+		.content
+			margin-left: 0
+
+		nav, .nav
+			float: right
+
+		li
+			margin-left: .2em
+
+		li.first
+			margin-left: 0
+
+#pageFooter 
+	background-color: $redHEX
+
+	p, .p, a
+		color: $whiteHEX
+		font-size: 12px
+
+	#company
+		margin-bottom: 1rem
+
+	#newsletter
+
+		.heading
+			color: $whiteHEX
+			display: inline-block
+			font-size: rem(16)
+			margin-bottom: 1rem
+
+		button
+			background-color: transparent
+			border-bottom: dotted 1px $whiteHEX
+			+border-radius(0)
+			padding: 0
+			text-align: left
+
+		button:hover
+			border-bottom: solid 1px $whiteHEX
+
+	#terms
+
+		li
+			margin-left: 1rem
+
+		.first
+			margin-left: 0
+
+#banner
+	background-color: $redHEX
+
+	h1, p
+		color: $whiteHEX
+
+	h1
+		border: 0
+		padding: 0
+		font-size: rem(30)
+
+#home
+
+	#banner
+
+		h1
+			margin-top: rem(16)
+			text-align: center
+
+		img
+			opacity: 0.5
+
+	#promote
+		background-color: #EEEEEE
+
+#about-us
+
+	#staff
+		background-color: #EEEEEE 
+
+#our-shops
+
+	.r
+		display: none
+
+	#delivery
+
+		.content
+			background-color: $darkRedHEX
+			padding: 1rem
+
+		h1
+			font-size: 14px
+			text-align: center
+	
+		.row
+
+			.row
+				background-color: #EEEEEE
+
+#donations
+
+	.donate-items
+		margin-bottom: 1rem
+
+		.content
+			margin-bottom: 0
+
+/* SMALL TABLETS AND LARGER */
+@media #{$m-}
+
+	#pageFooter 
+
+		#terms
+
+			.inline-list
+				float: right
+
+/* LARGE TABLETS AND LARGER */
+@media #{$l-}
+
+	.contain
+		padding: 2rem
+
+	.column
+		margin: 2rem 0
+
+	.content 
+		margin: 0 2rem
+
+	.box.overlay-bottom
+		background-color: #{"rgba(" + $redRGB + ", 0.8)"}
+
+	#home
+
+		#banner
+
+			h1, p
+				text-align: left
+
+	#our-shops
+
+		#banner
+
+			.r
+				display: inline-block

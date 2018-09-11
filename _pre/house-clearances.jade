@@ -1,0 +1,53 @@
+extends ./includes/layout.jade
+
+block vars
+	- var bodyId = 'house-clearances'
+	- var accordions = false
+	- var counter = false
+	- var lightbox = false
+	- var socialIcons = false
+	- var scrollActions = false
+	- var scrollTos = false
+
+block pageMeta
+	title Offering house clearances to Asthma sufferers
+	+description('We can collect all your unwanted items. Book your house clearance today on 07882437140')
+
+block pageContent
+
+	#banner.row
+		.contain
+
+			.column.margin-0
+				.content
+					h1 House Clearances
+					p We offer house clearances to Asthma sufferers and related illnesses, their families and/or their carers.
+
+	.row
+		.contain
+
+			.column.l-span-6.xl-span-6
+				.content
+					p.
+						We are able to take anything that will fit into the van.  A trip to the dump for goods that cannot be recycled or re-sold can be arranged. We will either donate goods to people in need or sell the goods to raise funds for SARA#[span.uk UK]. All other goods and materials that cannot be sold will be recycled before being disposed of.
+					h2.h1 Bookings
+					p.
+						Bookings can be taken up to three weeks in advance. Three to four days notice is needed, with a choice of collection on a Wednesday or Saturday. Two men and one van will be able to clear your goods for up to four hours.#[br]
+					span #[strong Please note *]
+					ul
+						li We #[strong CANNOT] take dangerous chemicals or hazardous materials
+						li We #[strong CANNOT] provide boxes or bags for packing
+						li We #[strong CANNOT] pack goods for you
+						li We #[strong CANNOT] empty wardrobes, lofts, garages, sheds etc
+					h2.h1 House Clearance Charges
+					//-p A charitable donation of £200.00 (VAT Exempt) for sufferers of Asthma or a related illness
+					p There are two different charges, depending on your circumstances:
+					ul
+						li A charitable donation of £200.00 (VAT Exempt) for sufferers of Asthma or a related illness
+						li £200.00 + VAT for #[strong NON] sufferers of Asthma or related illnesses
+					p.
+						Full payment on booking is required. This can be paid in cash or by card / bank payment. Please ask a member of the team for more details when making your booking.
+
+			.column.s-hide.m-hide.l-span-6.xl-span-6
+				.content
+					img(src="#{imagesDir}van.jpg", alt="SARA Delivery Van")

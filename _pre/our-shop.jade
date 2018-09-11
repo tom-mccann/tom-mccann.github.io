@@ -1,0 +1,230 @@
+extends ./includes/layout.jade
+
+block vars
+	- var bodyId = 'our-shops'
+	- var accordions = false
+	- var counter = false
+	- var lightbox = false
+	- var socialIcons = false
+	- var scrollActions = false
+	- var scrollTos = false
+
+block pageMeta
+	title Visit our furniture showroom in Reading
+	+description('Selling household furniture and electrical goods in Reading. Visit our showroom today.')
+
+block pageContent
+
+	#banner.row
+		.contain
+
+			#heading.column.l-span-6.xl-span-9.l-margin-0.xl-margin-0
+				.content
+					h1 We sell donated goods, #[br.r]branded, new and clearance stock
+
+			#delivery.column.l-span-6.xl-span-3.l-margin-0.xl-margin-0
+				.content
+					aside
+						h1 Local delivery available for a donation of £10.00 (Wednesdays &amp; Fridays)
+
+	section
+		#bennet-road.row
+
+			.contain
+
+				.column
+					.content
+						h1 Bennet Road Furniture Showroom
+
+				.column.inline.l-span-3.xl-span-3
+					.content
+						span(itemscope, itemtype="http://schema.org/LocalBusiness")
+							h2 Opening Hours
+							span.p
+								time(itemprop="openingHours", datetime="Mo 10:00-17:30") Mondays 10am - 5:30pm #[br]
+								time(itemprop="openingHours", datetime="Tu 10:00-17:30") Tuesdays 10am - 5:30pm #[br]
+								time(itemprop="openingHours", datetime="We 10:00-17:30") Wednesdays 10am - 5:30pm #[br]
+								time(itemprop="openingHours", datetime="Th 10:00-17:30") Thursdays 10am - 5:30pm #[br]
+								time(itemprop="openingHours", datetime="Fr 10:00-17:30") Fridays 10am - 5:30pm #[br]
+								time(itemprop="openingHours", datetime="Sa 10:00-17:30") Saturdays 10am - 5:30pm #[br]
+								time(itemprop="openingHours", datetime="Su 11:00-16:00") Sundays 11am - 4pm #[br]
+							h2 Address
+							span.p(itemprop="address", itemscope, itemtype="http://schema.org/PostalAddress")
+								a(href="https://www.google.co.uk/maps/place/Bennet+Place,+15+Bennet+Rd,+Reading+RG2+0QX/@51.426438,-0.9787139,17z/data=!4m7!1m4!3m3!1s0x48769c9d8e3642f1:0xe6a21bc39cdfd709!2sBennet+Place,+15+Bennet+Rd,+Reading+RG2+0QX!3b1!3m1!1s0x48769c9d8e3642f1:0xe6a21bc39cdfd709", itemprop="streetAddress", onclick="ga('send', 'event', 'Click', 'Location', 'Google Map', 'Bennet Road');", title="Google Maps Location", target="_blank") 15 Bennet Road
+								#[br]
+								span(itemprop="addressLocality") Reading #[br]
+								span(itemprop="addressRegion") Berkshire #[br]
+								span(itemprop="postalCode") RG2 0QX #[br]
+								//-a(href="tel:+447882437140", title="", itemprop="telephone") 07882437140
+
+				.column.inline.l-span-9.xl-span-9
+					.content
+						img(src="#{imagesDir}inside-bennet-road-furniture-showroom.jpg", alt="Sofas at Bennet Road Furniture Showroom, Reading")
+
+				.column.inline.m-span-6.l-span-3.xl-span-3
+					.content
+						h2 Bedroom
+						img.p(src="#{imagesDir}bed-and-matress.jpg", alt="Bed and Matress at Bennet Road Furniture Showroom, Reading")
+						ul.block-list
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Beds
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Chests of Drawers
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Cots
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Matresses
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Wardrobes
+
+				.column.inline.m-span-6.l-span-3.xl-span-3
+					.content
+						h2 Lounge &amp; Dining
+						img.p(src="#{imagesDir}table-and-chairs.jpg", alt="Table and Chairs at Bennet Road Furniture Showroom, Reading")
+						ul.block-list
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Cabinets
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Sideboards
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Sofas
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Tables &amp; Chairs
+
+				.column.inline.m-span-6.l-span-3.xl-span-3
+					.content
+						h2 Home Electricals
+						img.p(src="#{imagesDir}home-electricals.jpg", alt="Electrical Appliances at Bennet Road Furniture Showroom, Reading")
+						ul.block-list
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Dish Washers
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Freezers
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Fridges
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Microwaves
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Ovens
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Tumble Dryers
+
+				.column.inline.m-span-6.l-span-3.xl-span-3
+					.content
+						h2 And More...
+						img.p(src="#{imagesDir}shabby-chic.jpg", alt="Electrical Appliances at Bennet Road Furniture Showroom, Reading")
+						ul.block-list
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Children's Toys
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Clothing
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Garden Furniture
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Gym Equipment
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Office Furniture
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Shabby Chic
+
+	//-section
+		#shinfield-road.row
+
+			.row
+
+				.contain
+
+					.column
+						.content
+							h1 Shinfield Road Charity Shop
+
+			.contain
+
+				.column.m-span-.xl-span-3
+					.content
+						span(itemscope, itemtype="http://schema.org/LocalBusiness")
+							h2 Opening Hours
+							span.p
+								time(itemprop="openingHours", datetime="Mo-Sa 10:00-17:30") Mon - Sat, 10:30am - 5:30pm #[br]
+								span Sun, closed #[br]
+							h2 Address
+							span.p(itemprop="address", itemscope, itemtype="http://schema.org/PostalAddress")
+								span(itemprop="streetAddress") 229 Shinfield Road #[br]
+								Span(itemprop="addressLocality") Reading #[br]
+								span(itemprop="addressRegion") Berkshire #[br]
+								span(itemprop="postalCode") RG2 8HD #[br]
+								//-a(href="tel:+447882437140", title="", itemprop="telephone") 07882437140
+
+				.column.xl-span-9
+					.content
+						img(src="#{imagesDir}inside-shinfield-road-charity-shop.jpg", width="920", alt="Home Electricals at Shinfield Road Charity Shop, Reading")
+
+			.contain
+
+				.column.xl-span-3
+					.content
+						h2 Home Electricals
+						img.p(src="#{imagesDir}home-electricals.jpg", width="320", alt="Electrical Appliances at Bennet Road Furniture Showroom, Reading")
+						ul.block-list
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Dish Washers
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Freezers
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Fridges
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Microwaves
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Ovens
+							li #[img(src="#{imagesDir}red-tick.png", width="16", height="16", alt="Tick Icon")] Tumble Dryers
+
+	//-section
+		#the-meadway.row
+
+			.row
+
+				.contain
+
+					.column
+						.content
+							h1.last The Meadway Charity Shop
+
+			.contain
+
+				.column.m-span-.xl-span-3
+					.content
+						span.last(itemscope, itemtype="http://schema.org/LocalBusiness")
+							h2 Opening Hours
+							span.p
+								time(itemprop="openingHours", datetime="Mo-Sa 10:00-17:30") Mon - Sat, 10am - 5pm #[br]
+								span Sun, closed #[br]
+							h2 Address
+							span.p(itemprop="address", itemscope, itemtype="http://schema.org/PostalAddress")
+							span(itemprop="streetAddress") 15-16 The Meadway Precinct #[br]
+							Span(itemprop="addressLocality") Tilehurst #[br]Reading #[br]
+							span(itemprop="addressRegion") Berkshire #[br]
+							span(itemprop="postalCode") RG30 4AA #[br]
+								//-a(href="tel:+447882437140", title="", itemprop="telephone") 07882437140
+
+				.column.xl-span-9
+					.content
+						img(src="#{imagesDir}inside-bennet-road-furniture-showroom.jpg", width="920", alt="Sofas at Bennet Road Furniture Showroom, Reading")
+
+			.contain
+
+	//-section
+		.row
+			.contain
+
+				.column
+					.content
+						h1 Our Shops
+
+				.column.xl-span-6
+					.content
+						.map.aspect-ratio-4x3
+							iframe(src="https://www.google.com/maps/d/embed?mid=z21hERGufFdg.k0ytnXgPmE4A", width="640", height="480" frameborder="0")
+
+				.column.xl-span-3
+					.content
+						h2 Bennet Place
+						p(itemscope, itemtype="http://schema.org/PostalAddress")
+							span(itemprop="streetAddress") 15 Bennet Road #[br]
+							Span(itemprop="addressLocality") Reading #[br]
+							span(itemprop="addressRegion") Berkshire #[br]
+							span(itemprop="postalCode") RG2 0QX #[br]
+							a(href="tel:+447882437140", itemprop="telephone") 07882437140
+
+				.column.xl-span-3
+					.content
+						h2 Shinfield Road
+						p(itemscope, itemtype="http://schema.org/PostalAddress")
+							span(itemprop="streetAddress") 229 Shinfield Road #[br]
+							Span(itemprop="addressLocality") Reading #[br]
+							span(itemprop="addressRegion") Berkshire #[br]
+							span(itemprop="postalCode") RG2 8HD #[br]
+							a(href="tel:+447882437140", itemprop="telephone") 07882437140
+
+				.column.xl-span-3
+					.content
+						h2 The Meadway
+						p(itemscope, itemtype="http://schema.org/PostalAddress")
+							span(itemprop="streetAddress") 15-16 The Meadway Precinct #[br]
+							Span(itemprop="addressLocality") Tilehurst #[br]Reading #[br]
+							span(itemprop="addressRegion") Berkshire #[br]
+							span(itemprop="postalCode") RG30 4AA #[br]
+							a(href="tel:+447882437140", itemprop="telephone") 07882437140

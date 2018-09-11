@@ -1,0 +1,89 @@
+html.active-lightbox {
+  overflow-y: hidden;
+}
+
+#lightBox {
+  display: none;
+  position: fixed;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease-in-out 0s;
+  -o-transition: opacity 0.4s ease-in-out 0s;
+  -moz-transition: opacity 0.4s ease-in-out 0s;
+  -webkit-transition: opacity 0.4s ease-in-out 0s;
+  z-index: 99990;
+}
+
+#lightBox #lightBoxBgClick {
+  cursor: pointer;
+  position: absolute;
+  z-index: -1;
+}
+
+#lightBox #lightBoxImg {
+  margin: auto;
+  max-height: 85%;
+  max-width: 85%;
+  position: absolute;
+  z-index: 0;
+}
+
+#lightBox #lightBoxCloseBtn {
+  background: none repeat scroll 0 0 #fff;
+  cursor: pointer;
+  height: 40px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+}
+
+#lightBox #lightBoxPrevBtn {
+  background: none repeat scroll 0 0 #fff;
+  cursor: pointer;
+  height: 40px;
+  margin-top: -20px;
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  width: 40px;
+}
+
+#lightBox #lightBoxNextBtn {
+  background: none repeat scroll 0 0 #fff;
+  cursor: pointer;
+  height: 40px;
+  margin-top: -20px;
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  width: 40px;
+}
+
+#lightBox.show {
+  display: block;
+}
+
+#lightBox.active {
+  opacity: 1;
+}
+
+#lightBoxDimmer {
+  background-color: #000;
+  display: none;
+  position: fixed;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out 0s;
+  -o-transition: opacity 0.4s ease-in-out 0s;
+  -moz-transition: opacity 0.4s ease-in-out 0s;
+  -webkit-transition: opacity 0.4s ease-in-out 0s;
+  z-index: 99980;
+}
+
+#lightBoxDimmer.show {
+  display: block;
+}
+
+#lightBoxDimmer.active {
+  opacity: 0.9;
+}

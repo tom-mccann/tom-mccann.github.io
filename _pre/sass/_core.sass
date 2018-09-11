@@ -1,0 +1,543 @@
+// VARS
+
+$rem: 16
+$fluidWidth: 100  // % Percent %
+$fluidMaxWidth: 1200 // px Pixels px
+// Media Queries
+$s: "(max-width: 650px)" // Telephones only
+$m: "(min-width: 651px) and (max-width: 950px)" // Small tablets only
+$l: "(min-width: 951px) and (max-width: 1250px)" // Large tablets only
+$xl: "(min-width: 1251px)" // Keyboard, Video, Mouse only
+$m-: "(min-width: 651px)" // Small tablets and larger
+$l-: "(min-width: 951px)" // Large tablets and larger
+$laptop: "(min-width: 1251px) and (max-height:700px)" // Laptop
+// Sans Serif Fonts
+$arial: Arial, "Helvetica Neue", Helvetica, sans-serif
+$impact: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif
+$lucidaGrande: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif
+$tahoma: Tahoma, Verdana, Segoe, sans-serif
+$openSans: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif
+$verdana: Verdana, Geneva, sans-serif
+// Serif Fonts
+$georgia: Georgia, Times, "Times New Roman", serif
+$timesNewRoman: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif
+// Monospaced Fonts
+$courier: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace
+// Z Indexes
+$jsAlertZindex: 100000
+$cookieNoticeZindex: 100000
+$lightBoxZindex: 99990
+$lightBoxDimmerZindex: 99980
+$touchToolbarZindex: 99970
+$hamburgerNavZindex: 99960
+$hamburgerNavDimmerZindex: 99950
+$navigationWrapperZindex: 1000
+$pageHeaderZindex: 900
+// Elements
+$button: "button, .button"
+$label: "label, .label"
+
+@import mixins
+
+// CORE STYLES
+	
+article, aside, details, figcaption, figure, footer, form, header, hgroup, img, main, nav, section, summary 
+	display: block
+
+a
+	display: inline-block
+
+	img
+		border: 0
+
+figure
+	margin: 0
+
+img
+	height: auto
+	margin: 0 auto
+	max-width: 100%
+	-ms-interpolation-mode: bicubic
+
+nav, .nav
+	+box-sizing(border-box)
+
+	ul
+		list-style: none
+		margin: 0
+		padding: 0
+
+	a
+		display: block
+		+user-select(none)
+
+	a::selection, a::-moz-selection
+		background: transparent
+
+video 
+	display: none
+
+html
+	font-size: 14px
+	overflow-x: hidden
+	width: 100%
+	+text-size-adjust(100%)
+	+zoom(1)
+
+html.hamburger-active
+	overflow-y: hidden
+
+body
+	width: 100%
+	margin: 0
+
+#detectDevice
+	display: none
+	width: 0
+
+#cookieNotice
+	bottom: -100%
+	border: solid 1px #666
+	display: none
+	position: fixed
+	right: 20px
+	width: 160px
+	padding: 20px
+	color: #FFF
+	text-align: center
+	background-color: #000
+	z-index: $cookieNoticeZindex
+	+transition(bottom .6s ease-in-out)
+
+	p
+		color: #FFFFFF
+		font-family: $arial
+		font-size: rem(16)
+		line-height: rem(24)
+		margin: 0
+		padding: 0
+
+	a
+		color: #FFFFFF
+
+	#closeButton
+		background-color: #333
+		border: 0
+		+border-radius(0)
+		color: #FFFFFF
+		cursor: pointer
+		font-family: $arial
+		font-size: rem(16)
+		font-weight: 100
+		margin: 1em 0 0
+		padding: 0.8em 1em
+		text-transform: inherit
+
+	#closeCookieNotice:hover
+		background-color: #555
+	
+#cookieNotice.show
+	display: block
+
+#cookieNotice.active
+	bottom: 20px
+
+#hamburgerNavDimmer 
+	background-color: #000
+	cursor: pointer
+	display: none
+	opacity: 0
+	position: fixed
+	+transition(opacity .4s ease-in-out 0s)
+	z-index: $hamburgerNavDimmerZindex
+	@extend .cover
+
+#hamburgerNavDimmer.show 
+	display: block
+
+#hamburgerNavDimmer.active 
+	opacity: 0.8
+
+#hamburgerNav
+	+box-sizing(border-box)
+	display: none
+	height: 80%
+	right: -100%
+	overflow: hidden
+	position: fixed
+	top: 10%
+	+transition(right .4s ease-in-out 0s)
+	width: 80%
+	z-index: $hamburgerNavZindex
+
+	nav, .nav
+		position: relative
+		width: 100%
+		height: 100%
+		margin: 0
+		padding: 0
+		display: block
+		overflow-x: hidden
+		overflow-y: auto
+
+		ul
+			position: relative
+			display: block
+			margin: 0
+			padding: 0 
+
+			ul 
+				display: none
+
+		li 
+
+			display: block
+			position: relative
+			width: 100%
+			margin: 0
+			padding: 0
+			list-style: none
+
+		a
+			position: relative
+			margin: 0
+			padding: 1rem 2rem
+			line-height: 1.2em
+			text-decoration: none
+
+		.parent > a 
+			padding-right: 50px
+
+		.expand-button 
+			background-attachment: scroll
+			background-image: url(../images/ui-icons.png)
+			background-position: -40px 0
+			background-repeat: no-repeat
+			+background-size(auto 40px)
+			height: 100%
+			position: absolute
+			right: 0
+			top: 0
+			width: 40px
+
+		.expand > ul
+			display: block
+
+		.expand > a > .expand-button 
+			background-position: -80px 0
+
+	nav, .nav
+		> ul > li > a 
+			padding-left: 20px
+
+	nav, .nav
+		> ul > li > ul > li > a 
+			padding-left: 50px
+
+	nav, .nav
+		> ul > li > ul > li > ul > li > a 
+			padding-left: 80px
+
+	nav, .nav
+		> ul > li > ul > li > ul > li > ul > li > a 
+			padding-left: 100px
+
+#hamburgerNav.show
+	display: block
+
+#hamburgerNav.active
+	right: 10%
+
+#body 
+	position: relative
+
+#mainNav 
+	z-index: $navigationWrapperZindex
+
+	ul 
+		display: block
+
+		ul 
+			display: none
+			position: absolute 
+
+			a 
+				text-align: left
+				white-space: nowrap
+
+	li 
+		display: block
+		position: relative
+		list-style: none
+
+	li:hover > ul 
+		display: block
+
+	a 
+		text-decoration: none
+
+.horizontal 
+
+	#mainNav 
+
+		nav, .nav
+			> ul ul 
+				top: 100%
+				left: 0
+
+		nav, .nav
+			> ul > li 
+				display: block
+				float: left
+
+		ul ul ul 
+			top: 0
+			left: 100%
+
+.vertical 
+
+	#mainNav 
+		height: 100%
+		left: 0
+		position: fixed
+		top: 0
+
+		ul ul 
+			top: 0
+			left: 100%
+
+#page 
+	//min-height: 100vh
+	position: relative
+
+.row
+	+box-sizing(border-box)
+	position: relative
+	width: 100%
+
+//.row.cover 
+	min-height: 100vh
+
+.contain
+	+box-sizing(border-box)
+	margin: 0 auto
+
+.fixed .contain
+	width: 100%
+
+.fluid .contain 
+	max-width: #{ $fluidMaxWidth + 'px' }
+	width: #{ $fluidWidth + '%' }
+
+.contain:after 
+	content: " "
+	display: table
+	clear: both
+
+.column 
+	+box-sizing(border-box)
+	display: block
+	float: left
+	position: relative
+	+columnWidth(12)
+
+.column.inline 
+	display: inline-block
+	float: none
+	margin-right: -4px
+	vertical-align: top
+
+.content 
+	+box-sizing(border-box)
+
+	:first-child
+		@extend .first-child
+
+	:last-child
+		@extend .last-child
+
+.center
+	text-align: center
+
+.clearfix:after 
+	content: " "
+	display: table
+	clear: both
+
+.cover
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+
+.first-child
+	margin-top: 0
+
+.last-child
+	margin-bottom: 0
+
+.float-left
+	float: left
+
+.float-right
+	float: right
+
+.margin-0
+	margin: 0 !important
+
+.inline-list, .block-list
+	list-style: none
+	margin: 0
+	padding: 0
+
+.inline-list
+	li
+		display: inline-block
+		margin-right: -4px
+
+.block-list
+	li
+		display: block
+
+.aspect-ratio-4x3
+	padding-top: 74%
+
+.aspect-ratio-6x4
+	padding-top: 66%
+
+.aspect-ratio-16x9 
+	padding-top: 55%
+
+.aspect-ratio-4x3, .aspect-ratio-6x4, .aspect-ratio-16x9
+	position: relative
+	width: 100%
+
+	> video, > iframe, > img
+		position: absolute
+		width: 100%
+		z-index: 0
+		@extend .cover
+
+.overlay-bottom
+	+box-sizing(border-box)
+	display: block
+	position: relative
+	width: 100%
+	z-index: 1
+
+.stick-to-top.stuck 
+	position: fixed
+	top: 0
+
+.icon
+	cursor: pointer
+	background-image: url(../images/ui-icons.png)
+	background-repeat: no-repeat
+	background-attachment: scroll
+	+background-size(auto 100%)
+
+.icon#tel
+	background-position: -96px 0
+
+.icon#hamburger
+	background-position: 0 0
+
+/* LARGE TOUCH detectDevice AND LARGER */
+@media #{$l-}
+
+	.aspect-ratio-4x3, .aspect-ratio-6x4, .aspect-ratio-16x9
+
+		> video, > iframe, > img
+			height: 100%
+
+	.overlay-bottom
+		bottom: 0
+		position: absolute
+
+/* SMALL TOUCH detectDevice ONLY */
+@media #{$s}
+
+	.s-hide 
+		display: none
+
+	.s-show 
+		display: block
+
+	@for $i from 2 through 11
+		.s-span-#{$i}
+			+columnWidth($i)
+
+/* MEDIUM TOUCH detectDevice ONLY */
+@media #{$m}
+
+	html 
+		font-size: 14px
+
+	#detectDevice 
+		width: 1px
+
+	.fixed .contain 
+		width: 600px
+
+	.m-hide 
+		display: none
+
+	.m-show 
+		display: block
+
+	@for $i from 2 through 11
+		.m-span-#{$i}
+			+columnWidth($i)
+
+	.m-margin-0
+		margin: 0 !important
+
+/* LARGE TOUCH detectDevice ONLY */
+@media #{$l} 
+
+	html 
+		font-size: 14px
+
+	#detectDevice 
+		width: 2px
+
+	.fixed .contain 
+		width: 900px
+
+	.l-hide 
+		display: none
+
+	.l-show 
+		display: block
+
+	@for $i from 2 through 11
+		.l-span-#{$i}
+			+columnWidth($i)
+
+	.l-margin-0
+		margin: 0 !important
+
+/* KEYBOARD, VIDEO, MOUSE */
+@media #{$xl} 
+
+	html 
+		font-size: 16px
+
+	#detectDevice 
+		width: 3px
+
+	.fixed .contain 
+		width: 1200px
+
+	.xl-hide 
+		display: none
+
+	.xl-show 
+		display: block
+
+	@for $i from 2 through 11
+		.xl-span-#{$i}
+			+columnWidth($i)
+
+	.xl-margin-0
+		margin: 0 !important

@@ -1,0 +1,62 @@
+extends ./includes/layout.jade
+
+block vars
+	- var bodyId = 'home'
+	- var accordions = false
+	- var counter = false
+	- var lightbox = false
+	- var socialIcons = false
+	- var scrollActions = false
+	- var scrollTos = false
+
+block pageMeta
+	title SARA UK in England - The charity that supports Asthma sufferers, their carers and families. 
+	+description('Sara UK in England help Asthma sufferers live a better life. How do we do it? Call us in Reading on 07882437140')
+
+block pageContent
+
+	#banner.row
+		.contain
+
+			.column.float-right.l-span-6.xl-span-6
+				.content
+					img(src="#{imagesDir}asthma-word-cloud.png", alt="Asthma Word Cloud")
+
+			.column.l-span-6.xl-span-6
+				.content
+					h1.
+						#[abbr(title="Strathaven Asthmatic Relief Action") SARA]#[span.uk UK] in England is a charity that helps Asthma sufferers to live a better life. #[span(style="display:block;height:2rem")]
+						"A breath of fresh air"
+	#intro.row
+		.contain
+
+				.column.m-span-6.l-span-6.xl-span-6
+					.content
+						h2.h1 What do we do for people affected by Asthma?
+						p.
+							SARA#[span.uk UK] offer support with some of the hidden costs of caring for people, who suffer from Asthma and/or related illnesses. We offer help to the sufferers, their families and carers. The majority of our clients are reffered to us by healthcare providers, but we also accept self-referrals. For further information call #[a(href="tel:+447882437140", onclick="ga('send', 'event', 'Click', 'Contact', 'Telephone', 'Home Page');", title="Call 07882437140") 07882437140].
+
+				.column.m-span-6.l-span-6.xl-span-6
+					.content
+						h2.h1 How do we raise money for the charity?
+						p.
+							SARA#[span.uk UK] run a charity showroom in Bennet Road, Reading. It sells clearance stock, goods new and donated. Examples of items that we sell to raise money for the charity are fridge freezers, washing machines, sofas, tables, chairs &amp; clothing. [SARA No. 08420510] is a trading arm of the SARA#[span.uk UK] charity [No. 1159285.]
+	#promote.row
+		.contain
+
+			#visit.column.m-span-6.l-span-6.xl-span-6
+				.content
+					aside
+						.aspect-ratio-6x4
+							img(src="#{imagesDir}front-of-bennet-road-furniture-showroom.jpg", alt="Front of Bennet Road Furniture Showroom")
+							.box.overlay-bottom
+								h1.center
+									a(href="#{indexDir}our-shop.html#bennet-road" title="Bennet Road Furniture Showroom") Visit our furniture showroom in Reading
+
+			#delivery.column.m-span-6.l-span-6.xl-span-6
+				.content
+					aside
+						.aspect-ratio-6x4
+							img(src="#{imagesDir}van.jpg", alt="SARA Delivery Van")
+							.box.overlay-bottom
+								h1.center Local delivery available for a donation of £10.00 (Wednesdays &amp; Fridays)

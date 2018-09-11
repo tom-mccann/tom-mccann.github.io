@@ -1,0 +1,106 @@
+extends ./includes/layout.jade
+
+block vars
+	- var bodyId = 'about-us'
+	- var accordions = false
+	- var counter = false
+	- var lightbox = false
+	- var socialIcons = false
+	- var scrollActions = false
+	- var scrollTos = false
+
+block pageMeta
+	title Helping Asthma sufferers and their families for over 15 years 
+	+description('Visit our charity showroom in Reading. Contact Sara UK in England on 07882437140.')
+
+block pageContent
+
+	#banner.row
+		.contain
+
+			.column.margin-0
+				.content
+					h1 About #[abbr(title="Strathaven Asthmatic Relief Action") SARA]#[span.uk UK] in England
+
+	#about.row
+		.contain
+
+			.column.m-span-6.l-span-6.xl-span-6
+				.content
+					p.
+						#[abbr(title="Strathaven Asthmatic Relief Action") SARA]#[span.uk UK] is an English incorporated charity, reg. no. 1159285. We were incorporated in November 2014 after applying in 2013. The charity was set up to help people who suffer from Asthma and/or related illnesses, their families and carers, with some of the hidden costs.
+
+					p.
+						We offer help to anyone who has been referred to us by a recognised carer team, health worker, another charity, local authority or self-referral. SARA#[span.uk UK] offers help and support, irrespective of your income, age, sex or sexual orientation. 
+					p.
+						SARA#[span.uk UK] will carry on the good work instigated by our sister charity in Scotland - Strathaven Asthmatic Relief Action (SARA) no. SC028189, #[a(href="http://www.sara-asthma.uk/", onclick="ga('send', 'event', 'Click', 'Outbound', 'sara-asthma.uk');", title="Visit www.sara-asthma.uk", target="_blank") www.sara-asthma.uk]. This has been helping sufferers and their families for over 15 years in both Scotland and England.
+					p.
+						As a charity, we strive to provide our clients, both present and future, with a service that reflects the charity's ethos of a well-run but informal organisation. The charity is run and supported by trained volunteers, part time managers and three trustees. We hope that you will support the good work we do in and around the country.
+					.margin-top
+						h2.h1 Contact the charity
+						p.
+							If you wish to contact the charity or it's trustees directly, please contact Tom McCann, chairman, by post at 5 Seaford Gardens, Woodley, Reading, Berkshire RG5 3LN or by email at #[a(href="mailto:tom.mccann@hotmail.co.uk", onclick="ga('send', 'event', 'Click', 'Contact', 'Email', 'About Us page');", title="Email tom.mccann@hotmail.co.uk") tom.mccann@hotmail.co.uk]
+
+			.column.m-span-6.l-span-6.xl-span-6
+				.content
+
+					aside
+						.aspect-ratio-6x4
+							img(src="#{imagesDir}front-of-bennet-road-furniture-showroom.jpg", alt="Front of Bennet Road Furniture Showroom")
+							.box.overlay-bottom
+								h1.center
+									a(href="#{indexDir}our-shop.html#bennet-road" title="Bennet Road Furniture Showroom") Visit our furniture showroom in Reading
+
+					aside
+						.aspect-ratio-6x4
+							img(src="#{imagesDir}van.jpg", alt="SARA Delivery Van")
+							.box.overlay-bottom
+								h1.center Local delivery available for a donation of £10.00 (Wednesdays &amp; Fridays)
+
+	section
+		#staff.row
+			.contain
+
+				.column
+					.content
+						h1 Staff
+
+				.column.m-span-6.l-span-6.xl-span-6.margin-0
+
+						.column.m-span-6.l-span-6.xl-span-6
+							.content
+								figure
+									img(src="#{imagesDir}tom.jpg", alt="Tom")
+									figcaption Tom
+						.column.m-span-6.l-span-6.xl-span-6
+							.content
+								figure
+									img(src="#{imagesDir}margot.jpg", alt="Margot")
+									figcaption Margot
+						.column.m-span-6.l-span-6.xl-span-6
+							.content
+								figure
+									img(src="#{imagesDir}eric.jpg", alt="Eric")
+									figcaption Eric
+						.column.m-span-6.l-span-6.xl-span-6
+							.content
+								figure
+									img(src="#{imagesDir}theresa.jpg", alt="Theresa")
+									figcaption Theresa
+
+						.column.m-span-6.l-span-6.xl-span-6
+							.content
+								figure
+									img(src="#{imagesDir}sin.jpg", alt="Sin")
+									figcaption Sin
+						.column.m-span-6.l-span-6.xl-span-6
+							.content
+								figure
+									img(src="#{imagesDir}sophie.jpg", alt="Sophie")
+									figcaption Sophie
+
+				.column.m-span-6.l-span-6.xl-span-6.margin-0
+					.column
+						.content
+							aside.box
+								h1.center If you would like to volunteer for SARA#[span.uk UK]  please call #[a(href="tel:+447882437140", onclick="ga('send', 'event', 'Click', 'Contact', 'Telephone', 'About Us page');", title="Call 07882437140") 07882437140]

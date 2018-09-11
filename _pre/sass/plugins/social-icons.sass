@@ -1,0 +1,84 @@
+@import ../mixins
+
+$socialMediaLinkSize: 32
+
+.social-follow
+
+	a
+		background-attachment: scroll
+		background-image: url(/sources/images/social-icons.png)
+		background-repeat: no-repeat
+		+background-size(auto #{$socialMediaLinkSize * 2}px)
+		display: block
+		float: left
+		height: #{$socialMediaLinkSize}px
+		width: #{$socialMediaLinkSize}px
+
+	a[href*="facebook"]
+		background-position: 0 0
+
+	a[href*="facebook"]:hover
+		background-position: 0 -#{$socialMediaLinkSize}px
+
+	a[href*="google"]
+		background-position: -#{$socialMediaLinkSize}px 0
+
+	a[href*="google"]:hover
+		background-position: -#{$socialMediaLinkSize}px -#{$socialMediaLinkSize}px
+
+	a[href*="instagram"]
+		background-position: -#{$socialMediaLinkSize * 2}px 0
+
+	a[href*="instagram"]:hover
+		background-position: -#{$socialMediaLinkSize * 2}px -#{$socialMediaLinkSize}px
+
+	a[href*="linkedin"]
+		background-position: -#{$socialMediaLinkSize * 3}px 0
+
+	a[href*="linkedin"]:hover
+
+		background-position: -#{$socialMediaLinkSize * 3}px -#{$socialMediaLinkSize}px
+
+	a[href*="pinterest"]
+		background-position: -#{$socialMediaLinkSize * 4}px 0
+
+	a[href*="pinterest"]:hover
+		background-position: -#{$socialMediaLinkSize * 4}px -#{$socialMediaLinkSize}px
+
+	a[href*="tumblr"]
+		background-position: -#{$socialMediaLinkSize * 5}px 0
+
+	a[href*="tumblr"]:hover
+		background-position: -#{$socialMediaLinkSize * 5}px -#{$socialMediaLinkSize}px
+
+	a[href*="twitter"]
+		background-position: -#{$socialMediaLinkSize * 6}px 0
+
+	a[href*="twitter"]:hover
+		background-position: -#{$socialMediaLinkSize * 6}px -#{$socialMediaLinkSize}px
+
+	a[href*="wordpress"]
+		background-position: -#{$socialMediaLinkSize * 7}px 0
+
+	a[href*="wordpress"]:hover
+		background-position: -#{$socialMediaLinkSize * 7}px -#{$socialMediaLinkSize}px
+
+	a[href*="yell"]
+		background-position: -#{$socialMediaLinkSize * 8}px 0
+
+	a[href*="yell"]:hover
+		background-position: -#{$socialMediaLinkSize * 8}px -#{$socialMediaLinkSize}px
+
+	a[href*="youtube"]
+		background-position: -#{$socialMediaLinkSize * 9}px 0
+
+	a[href*="youtube"]:hover
+		background-position: -#{$socialMediaLinkSize * 9}px -#{$socialMediaLinkSize}px
+
+.social-follow.inline
+
+	a
+		display: inline-block
+		float: none
+		margin-right: -4px
+		vertical-align: top

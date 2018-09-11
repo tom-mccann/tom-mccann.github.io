@@ -1,0 +1,77 @@
+@import ../mixins
+
+html.active-lightbox 
+	overflow-y: hidden
+
+#lightBox
+	display: none
+	position: fixed
+	opacity: 0
+	overflow: hidden
+	+transition(opacity .4s ease-in-out 0s)
+	z-index: $lightBoxZindex
+	@extend .cover
+
+	#lightBoxBgClick 
+		cursor: pointer
+		position: absolute
+		z-index: -1
+		@extend .cover
+
+	#lightBoxImg 
+		margin: auto
+		max-height: 85%
+		max-width: 85%
+		position: absolute
+		z-index: 0
+		@extend .cover
+
+	#lightBoxCloseBtn
+		background: none repeat scroll 0 0 #fff
+		cursor: pointer
+		height: 40px
+		position: absolute
+		right: 10px
+		top: 10px
+		width: 40px
+	
+	#lightBoxPrevBtn 
+		background: none repeat scroll 0 0 #fff
+		cursor: pointer
+		height: 40px
+		margin-top: -20px
+		position: absolute
+		left: 20%
+		top: 50%
+		width: 40px
+	
+	#lightBoxNextBtn
+		background: none repeat scroll 0 0 #fff
+		cursor: pointer
+		height: 40px
+		margin-top: -20px
+		position: absolute
+		right: 20%
+		top: 50%
+		width: 40px
+
+#lightBox.show
+	display: block
+
+#lightBox.active
+	opacity: 1
+
+#lightBoxDimmer 
+	background-color: #000
+	display: none
+	position: fixed
+	opacity: 0
+	+transition(opacity .4s ease-in-out 0s)
+	z-index: $lightBoxDimmerZindex
+	@extend .cover
+
+#lightBoxDimmer.show 
+	display: block
+
+#lightBoxDimmer.active 
+	opacity: 0.9

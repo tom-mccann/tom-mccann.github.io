@@ -1,0 +1,86 @@
+// FONTS
+
+@function rem($pxFontSize)
+	$remFontSize: $pxFontSize / $rem
+	@return #{ $remFontSize + 'rem' }
+
+=fontFile($fontFile)
+	src: url('../fonts/#$fontFile.woff2') format('woff2') /* Super Modern Browsers */, url('../fonts/#$fontFile.woff') format('woff')/* Pretty Modern Browsers */, url('../fonts/#$fontFile.ttf')  format('truetype') /* Safari, Android, iOS */
+
+// GRID
+
+@function calculateColumnSpan($span)
+	$singleColumnWidth: (100 / 12)
+	$spanWidth: ( $span * $singleColumnWidth )
+	@return #{ $spanWidth + '%' }
+
+=columnWidth($span)
+	width: calculateColumnSpan($span)
+
+// PREFIXING
+
+=background-size($background-size)
+	background-size: $background-size
+	-o-background-size: $background-size
+	-moz-background-size: $background-size
+	-webkit-background-size: $background-size
+
+=border-radius($border-radius)
+	border-radius: $border-radius
+	-moz-border-radius: $border-radius
+	-webkit-border-radius: $border-radius
+
+=box-shadow($box-shadow)
+	box-shadow: $box-shadow
+	-moz-box-shadow: $box-shadow
+	-webkit-box-shadow: $box-shadow
+
+=box-sizing($box-sizing)
+	box-sizing: $box-sizing
+	-moz-box-sizing: $box-sizing
+	-webkit-box-sizing: $box-sizing
+
+=calc($property, $expression)
+	#{$property}: calc(#{$expression})
+	#{$property}: -moz-calc(#{$expression})
+	#{$property}: -webkit-calc(#{$expression})
+
+=text-shadow($text-shadow)
+	text-shadow: $text-shadow
+	-moz-text-shadow: $text-shadow
+	-webkit-text-shadow: $text-shadow
+
+=text-size-adjust($text-size-adjust)
+	text-size-adjust: $text-size-adjust
+	-moz-text-size-adjust: $text-size-adjust
+	-webkit-text-size-adjust: $text-size-adjust
+
+=transition($transition)
+	transition: $transition
+	-o-transition: $transition
+	-moz-transition: $transition
+	-webkit-transition: $transition
+
+=transform($transform)
+	transform: $transform
+	-ms-transform: $transform
+	-moz-transform: $transform
+	-webkit-transform: $transform
+
+=translate($translate)
+	translate: $translate
+	-ms-translate: $translate
+	-moz-translate: $translate
+	-webkit-translate: $translate
+
+=user-select($user-select)
+	user-select: $user-select
+	-o-user-select: $user-select
+	-ms-user-select: $user-select
+	-moz-user-select: $user-select
+	-webkit-user-select: $user-select
+
+=zoom($zoom)
+	zoom: $zoom
+	-moz-zoom: $zoom
+	-webkit-zoom: $zoom

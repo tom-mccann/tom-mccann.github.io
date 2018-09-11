@@ -1,0 +1,78 @@
+body {
+  background-color: #666;
+}
+
+#upgrade-wrapper {
+  width: 735px;
+  background-color: #f9f9f9;
+  padding: 20px 40px;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  color: #231f20;
+  margin: 0 auto;
+  display: block;
+  margin-top: 20px;
+}
+
+#upgrade-wrapper > h2 {
+  font-size: 26px;
+}
+
+#upgrade-wrapper > p {
+  font-size: 16px;
+}
+
+#browser-logos {
+  width: 655px;
+  height: 165px;
+  margin: 0 auto;
+}
+
+#browser-logos > a {
+  display: block;
+  float: left;
+  height: 165px;
+  width: 125px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  color: #000;
+  margin: 2px;
+}
+
+#browser-logos > a:hover {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+  color: #231f20;
+}
+
+#browser-logos > a:visited {
+  color: #231f20;
+}
+
+#browser-logos > a:active {
+  color: #231f20;
+}
+
+a#chrome {
+  background: url(/sources/images/browser-icons.jpg) transparent scroll no-repeat 0 20px;
+  margin-left: 6px;
+}
+
+a#firefox {
+  background: url(/sources/images/browser-icons.jpg) transparent scroll no-repeat -125px 20px;
+}
+
+a#safari {
+  background: url(/sources/images/browser-icons.jpg) transparent scroll no-repeat -375px 20px;
+}
+
+a#opera {
+  background: url(/sources/images/browser-icons.jpg) transparent scroll no-repeat -250px 20px;
+}
+
+a#internetexplorer {
+  background: url(/sources/images/browser-icons.jpg) transparent scroll no-repeat -500px 20px;
+}
